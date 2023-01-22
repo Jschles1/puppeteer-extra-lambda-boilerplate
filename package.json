@@ -1,12 +1,12 @@
 {
-    "name": "puppeteer-on-lambda",
+    "name": "puppeteer-extra-lambda-boilerplate",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
         "dev": "tsc && node dist/index.js",
         "zip": "tsc && 7z a -r function.zip ./dist/*  node_modules/",
-        "updateLamda": "npm run zip && aws s3 cp function.zip s3://herbhub-function && aws lambda update-function-code --function-name herbhub-data-collection --s3-bucket herbhub-function --s3-key function.zip && rm function.zip"
+        "updateLamda": "npm run zip && aws s3 cp function.zip s3://YOUR_S3_BUCKET_NAME && aws lambda update-function-code --function-name YOUR_LAMDA_FUNCTION_NAME --s3-bucket YOUR_S3_BUCKET_NAME --s3-key function.zip && rm function.zip"
     },
     "author": "",
     "license": "ISC",
